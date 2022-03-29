@@ -1,0 +1,115 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@500&display=swap');
+
+html, body {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(150, 150, 150, 0.267);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  border-radius: 5px;
+  outline: none;
+  font-size: 18px;
+  color: rgba(0, 0, 0, 0.644);
+  font-family: 'Inter', sans-serif;
+}
+
+.chat {
+  cursor: pointer;
+  background: rgb(255, 255, 255);
+  transition: all .2s;
+  box-shadow: 12px 12px 2px 1px rgba(0, 0, 0, 0.644);
+  height: 80%;
+  width: 30%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  border: 1px solid rgba(46, 46, 46, 0.356);
+}
+
+.chat:hover {
+ box-shadow: -12px 12px 2px -1px rgba(0, 0, 0, 0.644);
+}
+
+.username {
+  height: 50px;
+  width: 300px;
+  text-align: center;
+  border: 1px solid rgba(46, 46, 46, 0.356);
+  margin-top: 10px;
+}
+
+.messages {
+  width: 300px;
+  height: 300px;
+  margin: 20px 0;
+  padding: 20px;
+  overflow: scroll;
+  overflow-x: hidden;
+  border: 1px solid rgba(46, 46, 46, 0.356);
+}
+
+.sendmessage {
+  border: none;
+  display: flex;
+  height: 50px;
+  width: 300px;
+  justify-content: space-between;
+}
+
+.sendmessage > input{
+  width: 65%;
+  text-align: center;
+  border: 1px solid rgba(46, 46, 46, 0.356);
+}
+
+.sendmessage > button {
+  width: 30%;
+  border: 1px solid rgba(46, 46, 46, 0.356);
+  color: #212121;
+  cursor: pointer;
+  z-index: 1;
+  background: #e8e8e8;
+  position: relative;
+  font-weight: 1000;
+  font-size: 17px;
+  -webkit-box-shadow: 4px 8px 19px -3px rgba(0,0,0,0.27);
+  box-shadow: 4px 8px 19px -3px rgba(0,0,0,0.27);
+  transition: all 250ms;
+  overflow: hidden;
+}
+
+button::before {
+ content: "";
+ position: absolute;
+ top: 0;
+ left: 0;
+ height: 100%;
+ width: 0;
+ background-color: rgba(0, 0, 0, 0.644);
+ z-index: -1;
+ -webkit-box-shadow: 4px 8px 19px -3px rgba(0,0,0,0.27);
+ box-shadow: 4px 8px 19px -3px rgba(0,0,0,0.27);
+ transition: all 250ms
+}
+
+button:hover {
+ color: #e8e8e8;
+}
+
+button:hover::before {
+ width: 100%;
+}
+
+@media screen and (max-width: 768) {
+  .chat {
+    padding: 10px;
+  }
+}
