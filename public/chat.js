@@ -1,3 +1,7 @@
+const scrollToBottom = () => {
+  messages = $('.messages')
+  messages.scrollTop = messages.scrollHeight;
+}
 const socket = io('http://localhost:3000')
 
 function renderMessages(message) {
